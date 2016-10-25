@@ -8,7 +8,7 @@ Ruby.
 
 Make sure you have the latest rbenv and ruby-build versions, then run:
 
-    git clone https://github.com/rbenv/rbenv-default-gems.git $(rbenv root)/plugins/rbenv-default-gems
+    git clone https://github.com/alexsergeyev/rbenv-default-gems.git $(rbenv root)/plugins/rbenv-default-gems
 
 ## Usage
 
@@ -17,12 +17,12 @@ rbenv-default-gems automatically installs the gems listed in the
 version of Ruby with `rbenv install`.
 
 Specify gems in `$(rbenv root)/default-gems` by name, one per line. You may
-optionally specify a version string after the name, or `--pre` to
-install a prerelease version. For example:
+optionally specify build options or version.
 
-    bundler
-    bcat ~>0.6
-    rails --pre
+```
+sigar -- --with-cppflags="-fgnu89-inline"
+fog -v 1.8
+```
 
 Blank lines and lines beginning with a `#` are ignored.
 
